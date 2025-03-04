@@ -13,5 +13,6 @@
         <Button Content="Button 4" HorizontalAlignment="Left" Margin="440,100,0,0" VerticalAlignment="Top" Width="100" Height="40"/>
         <Button Content="Button 5" HorizontalAlignment="Left" Margin="569,100,0,0" VerticalAlignment="Top" Width="100" Height="40" Click="Button_Click"/>
         <Button Content="Button 6" HorizontalAlignment="Right" Margin="0,217,650,0" VerticalAlignment="Top" Width="100" Height="40" Click="Button_Click"/>
+        <Button Content="Button 7" HorizontalAlignment="Right" Margin="0,212,500,0" VerticalAlignment="Top" Width="100" Height="40" Click="Button_Click"/>
     </Grid>
 </Window>
