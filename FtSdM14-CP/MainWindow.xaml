@@ -6,23 +6,70 @@
         xmlns:local="clr-namespace:FtSdM14_CP"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
+
+    <!-- Background Grid -->
     <Grid>
-        <!-- First Row -->
-        <Button Content="Button 1" HorizontalAlignment="Left" Margin="50,100,0,0" VerticalAlignment="Top" Width="100" Height="40"/>
-        <Button Content="Button 2" HorizontalAlignment="Left" Margin="180,100,0,0" VerticalAlignment="Top" Width="100" Height="40"/>
-        <Button Content="Button 3" HorizontalAlignment="Left" Margin="310,100,0,0" VerticalAlignment="Top" Width="100" Height="40"/>
-        <Button Content="Button 4" HorizontalAlignment="Left" Margin="440,100,0,0" VerticalAlignment="Top" Width="100" Height="40"/>
-        <!-- Second Row -->
-        <Button Content="Button 5" HorizontalAlignment="Left" Margin="50,160,0,0" VerticalAlignment="Top" Width="100" Height="40"/>
-        <Button Content="Button 6" HorizontalAlignment="Left" Margin="180,160,0,0" VerticalAlignment="Top" Width="100" Height="40"/>
-        <Button Content="Button 7" HorizontalAlignment="Left" Margin="310,160,0,0" VerticalAlignment="Top" Width="100" Height="40"/>
-        <Button Content="Button 8" HorizontalAlignment="Left" Margin="440,160,0,0" VerticalAlignment="Top" Width="100" Height="40"/>
+        <Grid.Background>
+            <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                <GradientStop Color="#2c3e50" Offset="0.0"/>
+                <GradientStop Color="#3498db" Offset="1.0"/>
+            </LinearGradientBrush>
+        </Grid.Background>
 
-        <!-- Additional Button -->
-        <Button Content="Button Kruy" HorizontalAlignment="Left" Margin="570,160,0,0" VerticalAlignment="Top" Width="100" Height="40"/>
-        <Button Content="Button 5" HorizontalAlignment="Left" Margin="569,100,0,0" VerticalAlignment="Top" Width="100" Height="40" Click="Button_Click"/>
-        <Button Content="Button 6" HorizontalAlignment="Right" Margin="0,217,650,0" VerticalAlignment="Top" Width="100" Height="40" Click="Button_Click"/>
-        <Button Content="Button 7" HorizontalAlignment="Right" Margin="0,212,500,0" VerticalAlignment="Top" Width="100" Height="40" Click="Button_Click"/>
+        <!-- Button Panel -->
+        <Grid Margin="20">
+            <Grid.Resources>
+                <!-- Button Style -->
+                <Style TargetType="Button">
+                    <Setter Property="Width" Value="120"/>
+                    <Setter Property="Height" Value="50"/>
+                    <Setter Property="FontSize" Value="14"/>
+                    <Setter Property="FontWeight" Value="Bold"/>
+                    <Setter Property="Background" Value="#1abc9c"/>
+                    <Setter Property="Foreground" Value="White"/>
+                    <Setter Property="BorderBrush" Value="Transparent"/>
+                    <Setter Property="Margin" Value="10"/>
+                    <Setter Property="Padding" Value="5"/>
+                    <Setter Property="Effect">
+                        <Setter.Value>
+                            <DropShadowEffect Color="Black" BlurRadius="8"/>
+                        </Setter.Value>
+                    </Setter>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="#16a085"/>
+                            <Setter Property="Cursor" Value="Hand"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Grid.Resources>
 
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- Buttons -->
+            <Button Content="Button 1" Grid.Row="0" Grid.Column="0"/>
+            <Button Content="Button 2" Grid.Row="0" Grid.Column="1"/>
+            <Button Content="Button 3" Grid.Row="0" Grid.Column="2"/>
+            <Button Content="Button 4" Grid.Row="0" Grid.Column="3"/>
+
+            <Button Content="Button 5" Grid.Row="1" Grid.Column="0"/>
+            <Button Content="Button 6" Grid.Row="1" Grid.Column="1"/>
+            <Button Content="Button 7" Grid.Row="1" Grid.Column="2"/>
+            <Button Content="Button 8" Grid.Row="1" Grid.Column="3"/>
+
+            <Button Content="Special Button" Grid.Row="2" Grid.Column="1"/>
+            <Button Content="Extra Button" Grid.Row="2" Grid.Column="2"/>
+        </Grid>
     </Grid>
 </Window>
